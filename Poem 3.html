@@ -1,0 +1,238 @@
+<!DOCTYPE html><html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0 , maximum-scale=1.0">
+  <title>poem</title>
+  <style>
+    @font-face {
+      font-family: 'siyam';
+      src: url('Siyam Rupali ANSI.ttf');
+    }
+    @font-face {
+      font-family: 'mitra';
+      src: url('mitra.ttf');
+    }
+    @font-face {
+      font-family: 'mukti';
+      src: url('Mukti_1.99_PR.ttf');
+    }
+  
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+  html, body{
+    height: 100%;
+  }
+  html {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+}
+body {
+  font-family: 'siyam', sans-serif;
+  background-color: #f2f2f2;
+}
+
+.site-title {
+  background-color: #001f3f;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.main-title {
+  font-family: 'mitra', sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.sub-title {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.menu-icon {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: fixed !important; 
+  top: 24px;
+  left: 10px;
+  z-index: 1001;
+  will-change:transform;
+  transform:tranlateZ(0);
+}
+
+.menu-icon div {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+.menu-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 260px;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 30px 20px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.menu-panel.show {
+  transform: translateX(0);
+}
+
+.menu-panel a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 15px 0;
+  font-size: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: DarkTurquoise;
+  border-radius: 14px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h1 {
+  font-family: 'mukti', sans-serif;
+  font-size: 32px;
+  color: DarkSlateGray;
+  margin-bottom: 15px;
+}
+
+pre {
+  font-family: 'siyam', sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: black;
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 45px;
+  }
+  .sub-title {
+    font-family:'mukti',sans-serif;
+    display: block;
+  font-size: 17px;
+  font-weight: normal;
+  margin-top: -8px; 
+  color: #ccc;
+  margin-left:45%;
+  }
+  .container {
+    margin: 20px;
+    padding: 15px;
+  }
+  .menu-panel {
+    width: 220px;
+  }
+}
+.hide{
+  display:none;
+}
+  </style>
+</head>
+<body>
+  <div class="menu-icon" onclick="toggleMenu()" id="menuIcon">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div> 
+  <div class="site-title">
+    <div class="main-title">কালপুরুষ.কম</div>
+    <div class="sub-title">...ভাবনার জগতে স্বাগতম...</div>
+  </div>
+  
+  <div class="menu-panel" id="menuPanel">
+    <a href="index.html">🏠 হোম</a>
+    <a href="#">⚙️ সেটিংস</a>
+    <a href="#">📞 যোগাযোগ</a>
+  </div>
+  
+  <div class="container">
+    <h1>একাকিত্ব</h1>
+    <pre>
+     কখনো ভাবিনি 
+সঙ্গীহীন পেঁচা টার মতো হবো, 
+অন্যের মাঝে নিজেকে খোঁজার ব্যর্থ চেষ্টা করবো। 
+এতো বিষাদের সুর শুনিনি কখনো ,
+      দেখিনি বেদনার সাইক্লোন
+মার্সুপিয়ালের মতো বেঁচে থাকা, এ কেমন জীবন। 
+এতোটা একাকিত্ব ঘিরে ধরেনি কখনো । 
+কেউ কি জানে, আমার একাকিত্বের গভীরতা?
+ঘুম না আসা রাতগুলো জানে আমি কত একা,
+চোখের লোনা জলই বলে দিতে পারে সেই গভীরতা। 
+ মস্তিষ্ক বলে,  চেয়ে দেখো পর্বতশৃঙ্গের পানে,
+হাজার প্রতিকূলতার মাঝেও সে একলা দাঁড়িয়ে রয় । 
+অথচ মনের বিষন্নতা মস্তিষ্ককে কুড়ে কুড়ে খায় । 
+ একাকিত্বের বেড়াজালে আষ্টেপৃষ্ঠে আবদ্ধ হয়ে 
+হারিয়েছি সবই ,
+হারিয়েছি সুসময়, হারিয়েছি ভোরের রবি ।
+আমি পর্যায় সারণির হাইড্রোজেন পরমানু
+সৃষ্টির শুরু থেকে একা চলছি এখনো । 
+আমি তো হৃৎপিণ্ডের মতো,
+প্রয়োজন ছাড়া ভাবেনি কেউ কখনো। 
+
+হলাম না হয় একাকী একটা মানুষ,
+তবুও চাই না হতে কারো ঐচ্ছিক কোনো বিষয় 
+তবে হিলিয়াম এর দুইটা পরমানুর একটা যদি 
+আমি হতাম , আরেকটা তুমি 
+তাহলে মন্দ হতো না । 
+একই কক্ষপথে কাটিয়ে দিতাম এক মহা অনন্ত ।
+কবে ঘুঁচবে এই একাকিত্ব,
+পাতা ঝরা শীত শেষে আসবে কবে বসন্ত?
+
+
+    </pre>
+  </div> 
+  
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menuPanel');
+      const icon = document.getElementById('menuIcon');
+      
+
+      menu.classList.toggle('show');
+      icon.classList.toggle('hide');
+      
+    }
+
+    window.addEventListener('click', function(e) {
+      const menu = document.getElementById('menuPanel');
+      const icon = document.getElementById('menuIcon');
+
+      if (!menu.contains(e.target) && !icon.contains(e.target)) {
+        menu.classList.remove('show');
+        icon.classList.remove('hide');
+       
+      }
+    });
+  </script>
+
+</body>
+</html>
