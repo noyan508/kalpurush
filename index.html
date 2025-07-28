@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>My website</title>
   
-  <link rel="stylesheet" href="website-style .css">
+  <link rel="stylesheet" href="website-style.css">
 
 </head>
 <body>
@@ -55,7 +55,7 @@
   <h2>📚 আমার গল্পসমূহ</h2>
   <ul>
     <li>
-      <a href="Ch 1.html">দুনিয়াবিমুখতা</a>
+      <a href="ch_1.html">দুনিয়াবিমুখতা</a>
     </li>
     <li> 
       <a href="#">রবের সান্নিধ্যে কিছুক্ষণ</a>
@@ -67,16 +67,16 @@
        <h2>📚 আমার কবিতাসমূহ</h2>
     <ul>
       <li>
-        <a href="poem 1.html">শোষণ নীতি </a>
+        <a href="poem_1.html">শোষণ নীতি </a>
       </li>
       <li>
-        <a href="poem 2.html">সুহাসিনী</a>
+        <a href="poem_2.html">সুহাসিনী</a>
       </li>
       <li>
-        <a href="Poem 3.html">একাকিত্ব</a>
+        <a href="poem_3.html">একাকিত্ব</a>
       </li>
       <li>
-        <a href="Poem 4.html">সমাপ্তিতে সূত্রপাত</a>
+        <a href="poem_4.html">সমাপ্তিতে সূত্রপাত</a>
       </li>
     </ul>
     
@@ -100,20 +100,28 @@
     }
   });
 
+  
   const storyLink = document.getElementById('storylink');
   const storySection = document.getElementById('storySection');
 
   storyLink.addEventListener('click', function(e) {
     e.preventDefault();
     storySection.classList.toggle('hide');
-  });
 
+    if (!storySection.classList.contains('hide')) {
+      storySection.scrollIntoView({ behavior: 'smooth' });
+    }
+  });
   const poemLink = document.getElementById('poemLink');
   const poemSection = document.getElementById('poemsection');
 
   poemLink.addEventListener('click', function(e) {
     e.preventDefault();
     poemSection.classList.toggle('hide');
+
+    if (!poemSection.classList.contains('hide')) {
+      poemSection.scrollIntoView({ behavior: 'smooth' });
+    }
   });
 </script>
   
