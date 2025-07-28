@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>poem</title>
+  <style>
+    @font-face {
+      font-family: 'siyam';
+      src: url('Siyam Rupali ANSI.ttf');
+    }
+    @font-face {
+      font-family: 'mitra';
+      src: url('mitra.ttf');
+    }
+    @font-face {
+      font-family: 'mukti';
+      src: url('Mukti_1.99_PR.ttf');
+    }
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+  html {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translateZ(0);
+}
+
+body {
+  font-family: 'siyam', sans-serif;
+  background-color: #f2f2f2;
+}
+
+.site-title {
+  background-color: #001f3f;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+}
+
+.main-title {
+  font-family: 'mitra', sans-serif;
+  font-size: 45px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  margin-bottom: 5px;
+}
+
+.sub-title {
+  font-size: 16px;
+  color: #ccc;
+}
+
+.menu-icon {
+  width: 40px;
+  height: 40px;
+  background-color: transparent;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: fixed;
+  top: 24px;
+  left: 10px;
+  z-index: 1001;
+}
+
+.menu-icon div {
+  width: 20px;
+  height: 2px;
+  background-color: white;
+  margin: 3px 0;
+}
+
+.menu-panel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 260px;
+  background-color: rgba(0, 0, 0, 0.9);
+  padding: 30px 20px;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1000;
+}
+
+.menu-panel.show {
+  transform: translateX(0);
+}
+
+.menu-panel a {
+  display: block;
+  color: white;
+  text-decoration: none;
+  margin: 15px 0;
+  font-size: 20px;
+}
+
+.container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 20px;
+  background-color: DarkTurquoise;
+  border-radius: 14px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+
+h1 {
+  font-family: 'mukti', sans-serif;
+  font-size: 30px;
+  color: DarkSlateGray;
+  margin-bottom: 15px;
+}
+
+pre {
+  font-size: 17px;
+  line-height: 1.6;
+  color: DarkSlateGray;
+  margin: 8px 0;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  .main-title {
+    font-size: 45px;
+  }
+  .sub-title {
+    font-family:'mukti',sans-serif;
+    display: block;
+  font-size: 17px;
+  font-weight: normal;
+  margin-top: -8px; 
+  color: #ccc;
+  margin-left:45%;
+  }
+  .container {
+    margin: 20px;
+    padding: 15px;
+  }
+  .menu-panel {
+    width: 220px;
+  }
+}
+.hide{
+  display:none;
+}
+  </style>
+</head>
+<body>
+  <div class="site-title">
+    <div class="main-title">কালপুরুষ.কম</div>
+    <div class="sub-title">...ভাবনার জগতে স্বাগতম...</div>
+  </div>  <div class="menu-icon" onclick="toggleMenu()" id="menuIcon">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>  <div class="menu-panel" id="menuPanel">
+    <a href="index.html">🏠 হোম</a>
+    <a href="#">⚙️ সেটিংস</a>
+    <a href="#">📞 যোগাযোগ </a>
+  </div>
+  
+  <div class="container">
+    <h1>শোষণনীতি</h1>
+    <pre>
+ তারা বলে ইসলাম হলো বড্ড সেকেলে ধর্ম,
+তারাই তো সাধু সেজে নিত্য করে কুকর্ম।
+চায় না তারা হোক এ দ্বীন এই সমাজে প্রতিষ্ঠা,
+যেমন ইচ্ছে তেমন করে চালায় তারা দেশটা ।
+জনগণকে শোনায় তারা নীতিরও বাহার,
+গরীবের ধন সম্পদ তাদের নাকি আহার ।
+তাদের হৃদয় শক্ত প্রাচীর, লোভ-লালসায় ভরা,
+তারা নাকি মানুষ, রক্তে মাংসে গড়া ।
+জিম্মি মোরা তাদের কাছে হয়না কোন বিচার,
+ভুলে গেছি ঐতিহ্য মোদের, ভুলে গেছি আচার ।
+রাজনীতির নামে শেখায় মোদের,হরেক রকম নীতি,
+রাজনীতি নয়; তাদের এটা শোষণনীতি ।
+
+    </pre>
+  </div> 
+  
+  <script>
+    function toggleMenu() {
+      const menu = document.getElementById('menuPanel');
+      const icon = document.getElementById('menuIcon');
+      
+
+      menu.classList.toggle('show');
+      icon.classList.toggle('hide');
+      
+    }
+
+    window.addEventListener('click', function(e) {
+      const menu = document.getElementById('menuPanel');
+      const icon = document.getElementById('menuIcon');
+
+      if (!menu.contains(e.target) && !icon.contains(e.target)) {
+        menu.classList.remove('show');
+        icon.classList.remove('hide');
+       
+      }
+    });
+  </script>
+
+</body>
+</html>
