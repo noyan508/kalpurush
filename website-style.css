@@ -1,0 +1,278 @@
+<style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      font-family: 'Noto Sans Bengali', sans-serif;
+    }
+
+body {
+      background: url('IMG_20230720_181917_1.jpg') no-repeat center center fixed;
+      background-size: cover;
+      backdrop-filter: blur(6px);
+      display: flex;
+      flex-direction: column;
+    }
+  
+
+    .menu-icon {
+      width: 40px;
+      height: 40px;
+      background-color: transparent;
+      border-radius: 50%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+        position: fixed;
+      top: 24px;
+      left: 0%;
+      z-index: 1001;
+      
+    }
+
+    .menu-icon div {
+      width: 20px;
+      height: 2px;
+      background-color: white;
+      margin: 3px 0;
+    }
+
+
+    .menu-panel {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 300px;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+      transform: translateX(-100%);
+      transition: transform 0.3s ease;
+      z-index: 1000;
+    }
+
+    .menu-panel.show {
+      transform: translateX(0);
+    }
+
+    .menu-panel a {
+      display: block;
+      color: white;
+      text-decoration: none;
+      margin: 15px 0;
+      font-size: 22px;
+    }
+  
+  .site-title {
+  background-color: #001f3f; 
+  color: white;
+  text-align: center;
+  font-size: 50px;
+  font-weight: bold;
+  padding: 10px 0;
+  font-family: 'Noto Sans Bengali', sans-serif;
+  letter-spacing: 2px;
+ 
+}
+  
+@font-face {
+  font-family: 'mitra';
+  src: url('mitra.ttf');
+}
+
+.main-title {
+  font-family: 'mitra', sans-serif;
+  font-size: 46px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  color: white;
+  
+}
+
+  .sub-title {
+    font-family:'mukti',sans-serif;
+  display: block;
+  font-size: 14px;
+  font-weight: normal;
+  margin-top: -4px; 
+  color: #ccc;
+  margin-left:40%;
+}
+  @font-face{
+    font-family:'mukti';
+    src:url('Mukti_1.99_PR.ttf');
+  }
+  header {
+    font-family:'mukti',sans-serif;
+      background-color: white;
+      color:#5d6d7e;
+      padding: 20px;
+      text-align: center;
+      
+  }
+
+
+    .hero { 
+      padding: 30px;
+      text-align: center;
+      max-width: 600px;
+      background-color:#808b96;
+      border-radius:10px;
+    }
+
+    .hero h2 {
+      font-size: 36px;
+      color: Azure;
+      margin-bottom: 15px;
+      font-family:'bensen' ,sans-serif;
+    }
+
+    .hero p {
+      font-size: 20px;
+      color: white;
+      margin-bottom: 20px;
+      font-family:'bensen' ,sans-serif;
+    }
+
+    .hero button {
+      padding: 10px 20px;
+      background-color: #2e4053;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      border-radius:10px;
+    }
+  @font-face{
+    font-family:'bensen';
+    src:url('BenSenHandwriting.ttf');
+  }
+  
+  a {
+    font-size:22px;
+    margin-left:15%;
+    display:inline-block;
+    text-decoration:none;
+    font-weight:bold;
+    color:black;
+    font-family:'mukti',sans-serif;
+  }
+  .story-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+      animation: fadeIn 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.story-section ul {
+  list-style-type: square;
+  margin-top: 10px;
+  padding-left:20%;
+}
+
+.story-section.hide {
+  display: none;
+}
+.poem-section {
+  background-color: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 20px;
+  margin: 20px auto;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 10px;
+    animation: fadeIn 0.4s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  
+}
+
+.poem-section ul {
+  list-style-type: square;
+  margin-top: 10px;
+  padding-left: 20%;
+}
+
+.poem-section.hide {
+  display: none;
+}
+@font-face{
+  font-family:'openSans';
+  src:url('OpenSans-VariableFont_wdth,wght.ttf');
+}
+  .footer-text {
+  position: fixed;
+  bottom: 10%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  background-color: transparent;
+  color: white;
+  font-size: 17px;
+  padding: 10px 0;
+  font-family: 'openSans', sans-serif;
+}
+
+
+
+  
+    .hide {
+      display: none;
+    }
+  
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: lightsteelblue;
+  padding: 30px;
+  border-radius: 10px;
+  position:relative;
+  text-align: center;
+  max-width: 400px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  animation: fadeIn 0.4s ease;
+  font-family:'mukti',sans-serif;
+}
+
+.close-button {
+  position: absolute;
+  top: 03px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  cursor: pointer;
+}
+
+.hide {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+ 
+
+    
+  </style>
