@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My website</title>
+  
+  <link rel="stylesheet" href="website-style.css">
+
+</head>
+<body>
+  <div class="site-title">
+  <span class="main-title">কালপুরুষ.কম</span>
+  <span class="sub-title">সাহিত্য চর্চার একটি খোলা জানালা...</span>
+</div>
+
+       <div class="menu-icon" onclick="toggleMenu()" id="menuIcon">
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+
+  <div class="menu-panel" id="menuPanel">
+    <a href="index.html">🏠 হোম</a>
+    <a href="#">⚙️ সেটিংস</a>
+    <a href="#" id="contactLink">📞 যোগাযোগ</a>
+    
+    <p class="footer-text">
+  copyright &copy; 2025 kalpurush.com<br>
+      All rights reserved
+    </p>
+  </div>
+    </header>
+   </div>
+<div class="content">
+  <header>
+    <img src="img.png">
+   <h1>“জ্ঞান এমন এক আলো,
+          যা সব অন্ধকার দূর করে।”</h1>
+    </header>
+</div>
+
+
+  <main>
+   
+     <section class="hero">
+      <h2>স্বাগতম!</h2>
+      <p>এখানে আপনি পাবেন আমার লিখা নানা গল্প , কবিতা এবং আরও অনেক কিছু।</p>
+      <button>আরও জানুন</button>
+    </section>
+  </main>
+  
+  
+     <a href="#" id="storylink">• গল্প</a> 
+    <a href="#" id="poemLink">• কবিতা</a>
+    <a href="#" id="lifestoryLink">• জীবন-কাহিনী</a>
+    
+  
+  <div id="storySection" class="story-section hide">
+  <h2>📚 আমার গল্পসমূহ</h2>
+  <ul>
+    <li>
+      <a href="ch_1.html">দুনিয়াবিমুখতা</a>
+    </li>
+    <li> 
+      <a href="#">রবের সান্নিধ্যে কিছুক্ষণ</a>
+    </li>
+  </ul>
+ 
+</div>
+  <div id="poemsection" class="poem-section hide">
+       <h2>📚 আমার কবিতাসমূহ</h2>
+    <ul>
+      <li>
+        <a href="poem_1.html">শোষণ নীতি </a>
+      </li>
+      <li>
+        <a href="poem_2.html">সুহাসিনী</a>
+      </li>
+      <li>
+        <a href="poem_3.html">একাকিত্ব</a>
+      </li>
+      <li>
+        <a href="poem_4.html">সমাপ্তিতে সূত্রপাত</a>
+      </li>
+    </ul>
+    
+  </div>
+  
+   <div id="lifestorySection" class="lifestory-section hide">
+  <h2>👥 জীবন-কাহিনী</h2>
+  <ul>
+    <li>
+      <a href="#">খালিদ বিন ওয়ালিদ (রা)</a>
+    </li>
+    <li> 
+      <a href="#">সা'দ বিন মুয়াজ (রা)</a>
+    </li>
+  </ul>
+ 
+</div>
+  
+  <div id="overlay" class="overlay hide"></div>
+  <div id="contactModal" class="modal hide">
+  <div class="modal-content">
+    <span class="close-button" onclick="closeModal()">&times;</span>
+    <h2>📞 Contact us</h2>
+    <p>📱 Mobile: +8801946048344</p>
+    <p>✉️ E-mail: mdnoyanali72@gmail.com</p>
+   <p style="cursor: pointer;" onclick="window.open('https://wa.me/8801946048344', '_blank')">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" 
+       alt="WhatsApp" 
+       style="width:20px; vertical-align:middle; margin-right:6px;">
+  WhatsApp: +8801946048344
+   </p>
+    
+    <p>🌐 Address: Gazipur, Bangladesh</p>
+  </div>
+    
+</div>
+
+<script src="js_website.js"></script>
+</body>
+</html>
